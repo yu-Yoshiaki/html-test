@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Driven Customer Insights</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+        }
+
+        /* Header and Hero Section */
+        .hero-section {
+            background-color: #0088cc;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            padding: 20px 0;
+        }
+
+        .logo {
+            height: 40px;
+            margin: 20px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            height: calc(100% - 80px);
+        }
+
+        .hero-text {
+            width: 50%;
+            padding: 60px 40px;
+        }
+
+        .hero-image {
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 90%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 20px 0;
+        }
+
+        .subheadline {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 15px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff9900;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #e68a00;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            background-color: #ffffff;
+            padding: 60px 0;
+        }
+
+        .value-proposition {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .content-grid {
+            display: flex;
+            gap: 40px;
+            padding: 40px 0;
+        }
+
+        .benefits {
+            width: 50%;
+        }
+
+        .benefits ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .benefits li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .benefits li:before {
+            content: "•";
+            color: #0088cc;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+        }
+
+        .form-section {
+            width: 50%;
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            background-color: #ff9900;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-submit:hover {
+            background-color: #e68a00;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text, .hero-image {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .content-grid {
+                flex-direction: column;
+            }
+
+            .benefits, .form-section {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section {
+                height: auto;
+                min-height: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .subheadline {
+                font-size: 1rem;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #ffffff;
+            color: #666666;
+            padding: 20px 0;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-link {
+            color: #666666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #333333;
+        }
+
+        .footer-separator {
+            color: #cccccc;
+        }
+
+        .footer-bottom {
+            margin-top: 15px;
+            text-align: center;
+            color: #999999;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 480px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .footer-separator {
+                display: none;
+            }
+        }
+    
+        .hero-section {
+            background-color: #34495e;
+            background-image: url('https://via.placeholder.com/1920x1080?text=circuit');
+            background-blend-mode: overlay;
+        }
+        .cta-button {
+            background-color: #2c3e50;
+        }
+        .cta-button:hover {
+            background-color: #34495e;
+        }
+        .benefits li:before {
+            color: #34495e;
+        }
+        .form-submit {
+            background-color: #2c3e50;
+        }
+        .form-submit:hover {
+            background-color: #34495e;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <header class="header">
+                <img src="https://via.placeholder.com/200x40?text=Logo" alt="ロゴ" class="logo">
+            </header>
+            <div class="hero-content">
+        <i class="fas fa-brain fa-3x" style="color: #2c3e50;"></i>
+                <div class="hero-text">
+                    <h1>革新的なAi Driven Customer Insights</h1>
+                    <p class="subheadline">AIの力で、ビジネスを次のレベルへ</p>
+                    <a href="#form" class="cta-button">今すぐ始める</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://via.placeholder.com/600x400?text=Service+Image" alt="サービスイメージ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="value-proposition">
+                <h2>製品の主な特徴</h2>
+                <p>最新のAI技術を活用して、業務効率化と意思決定の最適化を実現します。</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="benefits">
+                    <h3>主な利点</h3>
+                    <ul>
+                        <li>重要な特徴その1</li>
+                        <li>重要な特徴その2</li>
+                        <li>重要な特徴その3</li>
+                        <li>重要な特徴その4</li>
+                    </ul>
+                </div>
+
+                <div class="form-section" id="form">
+                    <h3>お問い合わせ</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="お名前" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="メールアドレス" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="電話番号">
+                        </div>
+                        <button type="submit" class="form-submit">送信する</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-link">プライバシーポリシー</a>
+                <span class="footer-separator">|</span>
+                <a href="#" class="footer-link">利用規約</a>
+                <span class="footer-separator">|</span>
+                <a href="#" class="footer-link">特定商取引法に基づく表記</a>
+                <span class="footer-separator">|</span>
+                <a href="#" class="footer-link">運営会社</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

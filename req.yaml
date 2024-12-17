@@ -1,0 +1,17 @@
+layout:
+  header:
+    logo: Ai Driven Customer Insights
+  hero:
+    title: 革新的なAi Driven Customer Insights
+    subtitle: AIの力で、ビジネスを次のレベルへ
+    image: hero-image
+  main:
+    value_proposition:
+      description: 最新のAI技術を活用して、業務効率化と意思決定の最適化を実現します。
+    benefits:
+      title: 主な特徴
+      features:
+      - 高度な機械学習アルゴリズム
+      - リアルタイムデータ分析
+      - 自動化された意思決定支援
+      - スケーラブルなAIソリューション
